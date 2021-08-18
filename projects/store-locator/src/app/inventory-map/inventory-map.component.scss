@@ -1,0 +1,28 @@
+.popup {
+	background-color: white;
+	opacity: .9;
+	min-width: 120px;
+	padding: 6px;
+	border-radius: 4px;
+	box-shadow: 0 2px 7px 1px rgba(0,0,0,0.3);
+	max-width: 200px;
+}
+
+.line-item {
+	margin-left: 12px;
+	line-height: 24px;
+	margin: 6px;
+}
+
+.address {
+	display: flex;
+}
+
+.underlined {
+	text-decoration: underline;
+}
+
+.store-name {
+	font-size: 18px;
+	font-weight: 800;
+}
