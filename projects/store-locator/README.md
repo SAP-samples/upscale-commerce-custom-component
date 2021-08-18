@@ -1,6 +1,6 @@
 # Store Locator
 
-![Alt text](projects/store-locator/src/assets/store_locator_in_pdp.jpg?raw=true "Store locator in Product Details Page")
+![Alt text](./src/assets/store-locator.png "Store locator in Product Details Page")
 
 ## Dependencies & Configurations
 
