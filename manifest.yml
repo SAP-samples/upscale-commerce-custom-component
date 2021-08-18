@@ -1,0 +1,15 @@
+--- # CloudFoundry manifest
+applications:
+- name: event-logger
+  buildpacks:
+  - staticfile_buildpack
+  stack: cflinuxfs3
+  memory: 32M
+  disk_quota: 32M
+  instances: 1
+  path: dist
+  routes:
+  - route: event-logger.cfapps.us10.hana.ondemand.com
+  env:
+    FORCE_HTTPS: true
+...

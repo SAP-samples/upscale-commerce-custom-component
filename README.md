@@ -20,11 +20,16 @@ For additional support, [ask a question in SAP Community](https://answers.sap.co
 Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
 # CustomComponentSamples
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
+Custom Component samples for SAP Upscale Commerce
+
+## Samples
+
+1) Store Locator: Displays a Google Map with all Fulfillment Stores in your Upscale tenant. It can be configured to display inventory per product per store.
+2) Event Logger: Displays all known events received by the Custom Component from the SAP Upscale Store.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start <app-name>` for a dev server (i.e., `npm start store-locator`). Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -32,16 +37,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build --project=<app-name>` to build the project (i.e., `ng build --project=<app-name>`). The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## Build for CloudFoundry deployment
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `npm run assemble --project=<app-name>` to build the project (i.e., `npm run assemble --project=store-locator`). The build artifacts will be stored in the `dist/` directory. 
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Edit `manifest.yml` with deployment details & add the configured route as an "origin" in the External Application

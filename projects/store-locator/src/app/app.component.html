@@ -1,0 +1,15 @@
+<ng-container *ngIf="safeToDisplay">
+	<ng-container *ngIf="showInventoryMap; else baseMap" ngIfElse>
+		<app-inventory-map
+			[product] = "product"
+			(sizeChange) = setHeight($event)
+		></app-inventory-map>
+		</ng-container>
+
+		<ng-template #baseMap>
+		<app-map
+			(sizeChange) = setHeight($event)
+		></app-map>
+	</ng-template>
+</ng-container>
+
