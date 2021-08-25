@@ -1,0 +1,25 @@
+:host {
+	margin: 30px;
+	display: flex;
+	flex-direction: column;
+
+	.headline {
+		font-size: large;
+		font-weight: 800;
+		align-content: center;
+	}
+
+	.status-label {
+		font-size: medium;
+		align-content: center;
+	}
+
+	.red {
+		color: red;
+	}
+
+	.green {
+		color: green
+	}
+
+}

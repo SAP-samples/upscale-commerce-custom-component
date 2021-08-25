@@ -9,6 +9,7 @@ Custom Component samples for SAP Upscale Commerce.
 Samples:
 1) Store Locator: Displays a Google Map with all Fulfillment Stores in your Upscale tenant. It can be configured to display inventory per product per store.
 2) Event Logger: Displays all known events received by the Custom Component from the SAP Upscale Store.
+3) Sample Native Extension: Which includes the Klarna Checkout Component and the Employee Only Store Guard
 
 ## Requirements
 

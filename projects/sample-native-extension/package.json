@@ -1,0 +1,17 @@
+{
+  "name": "sample-native-extension",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^11.1.2",
+    "@angular/core": "^11.1.2",
+    "@caas/service-client-angular": "~0.8.187",
+    "@upscale/web-storefront-sdk": "^0.0.1-BETA.8.tgz"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "devDependencies": {
+    "@caas/service-client-angular": "file:../../libs/caas-service-client-angular-0.8.187.tgz",
+    "@upscale/web-storefront-sdk": "file:../../libs/upscale-web-storefront-sdk-0.0.1-BETA.8.tgz"
+  }
+}
