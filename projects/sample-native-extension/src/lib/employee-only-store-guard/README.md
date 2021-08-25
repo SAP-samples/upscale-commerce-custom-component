@@ -18,7 +18,7 @@ Follow the steps below to create your own version of the Employee Store Native E
 
 1. Create a Customer Attribute Set
 
-![Customer Attribute Set](../../../../../documentation/images/customer-attribute-se.png) 
+![Customer Attribute Set](../../../../../documentation/images/customer-attribute-set.png) 
 
 2. Configure mapping
 
@@ -29,11 +29,13 @@ Navigate to ./employee-only-store-guard.service.ts. And replace the Attribute co
 Open sample-native-extension.module.ts.
 
 Take note of the following code starting on line 10:
-    
+
+    ```
     this.registrationServices.register(
       "employee-only-store-component",
       EmployeeOnlyStoreGuardComponent
     )
+    ```
     
 This code is mapping the EmployeeOnlyStoreGuardComponent component class to the string "employee-only-store-component". The registrationService is a service which is shared between the PWA and the custom component, and essentially by providing this mapping, we are telling the PWA that this component exists
 
@@ -44,10 +46,11 @@ Open the klarna-checkout folder in terminal and execute commands to install all 
 Copy "libs" from the PWA to the root of custom-component-samples
 
 The exact commands are as follows:
-    
+
     npm install
     ng build sample-native-extension
     npm pack ./dist/sample-native-extension 
+    
    
 Host the generated tarball (.tgz) for the component library in a public environment such as NPM, GitHub, or S3. (Default tarball would be named "sample-native-extension-0.0.1.tgz")
 
@@ -87,12 +90,14 @@ If all the above setup is complete, please follow the steps below to test your n
     Open the file src/app/core/extension.module.ts in your ide/text editor
     Add the following to the first list of imports:
     
+   ``` 
     import { UpscaleExtensionModule } from 'sample-native-extension';
 
     // Add Native Extension Modules here
     const modules = [
       UpscaleExtensionModule
     ];
+    ```
 
 5. Access the application via localhost:4200. 
   - Eagerly loaded services from the Native Extension should be running. 
