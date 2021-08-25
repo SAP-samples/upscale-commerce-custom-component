@@ -1,9 +1,10 @@
+import { BehaviorSubject } from "rxjs";
 import { Injectable } from "@angular/core";
 import { NavigationStart, Router } from "@angular/router";
+import { concatMap, filter } from "rxjs/operators";
+
 import { AttributeSetResourceType, AttributeSetService, AttributeSetValue, CustomerService } from "@caas/service-client-angular";
 import { AuthenticationService } from "@upscale/web-storefront-sdk";
-import { BehaviorSubject } from "rxjs";
-import { concatMap, filter } from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -63,16 +64,16 @@ export class EmployeeOnlyStoreGuardService {
   evaluateAndApplyRedirect(ev: NavigationStart) {
     console.log(this.isLoggedIn, this.siteAccess, this.activeQuery)
     if(ev.url.includes('account') || ev.url.includes('login')){
-      console.log("case 1")
+      console.log("Navigation allowed - to account page")
       return;
     } else if(this.isLoggedIn && this.siteAccess) {
-      console.log("case 2")
+      console.log("Navigation allowed - is logged in employee")
       return
     } else if(this.activeQuery) {
-      console.log("case 3")
+      console.log("Navigation allowed - query active - might be an employee")
       return
     } else {
-      console.log("rejected: case 4")
+      console.log("Navigation rejected - not a logged in employee")
       this.router.navigate(['/en-US/','account']);
     }
   }

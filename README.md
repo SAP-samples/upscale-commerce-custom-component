@@ -7,9 +7,9 @@ Custom Component samples for SAP Upscale Commerce.
 Custom Component samples for SAP Upscale Commerce.
 
 Samples:
-1) Store Locator: Displays a Google Map with all Fulfillment Stores in your Upscale tenant. It can be configured to display inventory per product per store.
-2) Event Logger: Displays all known events received by the Custom Component from the SAP Upscale Store.
-3) Sample Native Extension: Which includes the Klarna Checkout Component and the Employee Only Store Guard
+1) Store Locator: Displays a Google Map with all Fulfillment Stores in your Upscale tenant. It can be configured to display inventory per product per store.[Read more](projects/store-locator/README.md)
+2) Event Logger: Displays all known events received by the Custom Component from the SAP Upscale Store. [Read more](projects/event-logger/README.md)
+3) Sample Native Extension: Which includes the Klarna Checkout Component and the Employee Only Store Guard. [Read more](projects/sample-native-extension/README.md)
 
 ## Requirements
 
@@ -32,10 +32,6 @@ Run `ng build --project=<app-name>` to build the project (i.e., `ng build --proj
 Run `npm run assemble --project=<app-name>` to build the project (i.e., `npm run assemble --project=store-locator`). The build artifacts will be stored in the `dist/` directory. 
 
 Edit `manifest.yml` with deployment details & add the configured route as an "origin" in the External Application
-
-## Known Issues
-
-1) Need to include a list of all known events and their interfaces.
 
 ## How to obtain support
 

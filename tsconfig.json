@@ -11,10 +11,6 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "paths": {
-      "native-extension": [
-        "dist/native-extension/native-extension",
-        "dist/native-extension"
-      ],
       "sample-native-extension": [
         "dist/sample-native-extension/sample-native-extension",
         "dist/sample-native-extension"
