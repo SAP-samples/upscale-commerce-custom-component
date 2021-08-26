@@ -2,7 +2,7 @@
 
 ## Custom Component samples for SAP Upscale Commerce.
 
-Custom Components are used to add customized UI elements to applications generated in SAP Upscale Commerce. The samples referenced here are real-world use cases and use both Iframe and Native based Custom Components.
+Custom Components are used to add customized UI elements to applications generated in SAP Upscale Commerce. The samples referenced here are real-world use cases and use both Iframe and Native based Custom Components. [General documentation](https://help.sap.com/viewer/a99d6fa0606f4f3cbf251e4e61f35feb/LATEST/en-US/f542f9dc2d744b28b471ca6f044d832c.html)
 
 ## Samples
 
