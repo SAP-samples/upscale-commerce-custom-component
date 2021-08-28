@@ -11,8 +11,12 @@ Custom Components are used to add customized UI elements to applications generat
   [Read more on back-end support](https://github.com/SAP-samples/upscale-commerce-external-application/tree/sample/store-locator-inventory-intermediary)
 2) Event Logger: Displays all known events received by the Custom Component from the SAP Upscale Store. 
   [Read more](projects/event-logger/README.md)
-3) Sample Native Extension: Which includes the Klarna Checkout Component and the Employee Only Store Guard. 
-  [Read more on Native Extensions](projects/sample-native-extension/README.md)
+3) Sample Native Extension with the following examples:
+    - Klarna Checkout Component
+    - Employee Only Service
+    - JavaScript Injection Service
+    
+    [Read more on Native Extensions](projects/sample-native-extension/README.md)
 
 ## Requirements
 
