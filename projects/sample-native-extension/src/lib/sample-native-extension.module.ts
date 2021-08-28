@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { RegistrationService } from '@upscale/web-storefront-sdk';
 import { EmployeeOnlyStoreGuardService, EmployeeOnlyStoreGuardComponent } from './employee-only-store-guard';
+import { InjectScriptService } from './inject-script';
 import { KlarnaCheckoutComponent } from './klarna-checkout';
 
 const components = [
@@ -20,8 +21,10 @@ export class UpscaleExtensionModule {
 
   constructor(
     private registrationServices: RegistrationService,
-    // eagerly load service
-    private employeeService: EmployeeOnlyStoreGuardService
+
+    // eagerly loaded custom service
+    // private employeeService: EmployeeOnlyStoreGuardService
+    // private injectScriptService: InjectScriptService
   ) {
      //register components
     this.registrationServices.register(
