@@ -24,7 +24,9 @@ export class AppComponent implements OnInit {
 		window.addEventListener(
 			'message',
 			event => {
-				this.handleEvent(event);
+        if(event.origin === environment.storeOrigin) {
+          this.handleEvent(event);
+        }
 			},
 			false
 		);
@@ -47,7 +49,7 @@ export class AppComponent implements OnInit {
 			data: null,
 		};
 
-		sendMessage(event);
+		sendMessage(event, environment.storeOrigin);
 	}
 
 	setHeight(height: number): void {
@@ -58,7 +60,7 @@ export class AppComponent implements OnInit {
 			}
 		};
 
-		sendMessage(event);
+		sendMessage(event, environment.storeOrigin);
 	}
 
 	handleEvent(messageEvent: MessageEvent): void {

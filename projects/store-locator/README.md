@@ -11,6 +11,8 @@
 	- Paste in the environments files
 4) Expect an API for the External Application to verify. This can be anything but should match what the External App instance expects. 
 	- Paste in the environments files
+5) Expect a store origin URL.
+  - Paste in the environments files
 
 
 ## Setup
