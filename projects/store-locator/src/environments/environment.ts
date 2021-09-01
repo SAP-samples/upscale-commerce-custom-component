@@ -4,6 +4,7 @@
 
 export const environment = {
 	production: false,
+  storeOrigin:  'https://your-store.com',
 	googleApiKey: '<your-google-api-key>',
 	intermediaryApiKey: '<your-external-application-api-key>',
 	intermediaryApiRoot: 'https://<your-external-application>.com',

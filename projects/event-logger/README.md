@@ -2,6 +2,10 @@
 
 ## Displays all events received from the Upscale Storefront.
 
+## Configure
+
+Replace `storeOrigin` in the environments files.
+
 ## Development server
 
 Run `npm start <app-name>` for a dev server (i.e., `npm start store-locator`). Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

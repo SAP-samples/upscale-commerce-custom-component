@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from '../environments/environment';
 
 import { UpscaleEvent as UpscaleInputEvent, UpscaleInputEventType } from './input-events.interface';
 import { InitializedEvent, SizeEvent } from './output-events.interface';
@@ -38,9 +39,12 @@ export class AppComponent {
 		window.addEventListener(
 			"message",
 			event => {
-				log('recieved', event);
+        if(event.origin === environment.storeOrigin) {
 
-				this.handleEvent(event);
+          log('recieved', event);
+
+          this.handleEvent(event);
+        }
 			},
 			false
 		);
@@ -52,7 +56,7 @@ export class AppComponent {
 			data: null,
 		};
 
-		sendMessage(event);
+		sendMessage(event, environment.storeOrigin);
 		this.setSize();
 	}
 
@@ -64,7 +68,7 @@ export class AppComponent {
 			}
 		};
 
-		sendMessage(event);
+		sendMessage(event, environment.storeOrigin);
 	}
 
 	handleEvent(messageEvent: MessageEvent) {
@@ -112,11 +116,4 @@ export class AppComponent {
 		}
 	}
 
-	private handlePaymentContinue() {
-
-	}
-
-	private handleOrderConfirmation() {
-
-	}
 }
