@@ -7,10 +7,13 @@ Custom Components are used to add customized UI elements to applications generat
 ## Samples
 
 1) Store Locator: Displays a Google Map with all Fulfillment Stores in your Upscale tenant. It can be configured to display inventory per product per store.
-  [Read more on the UI](projects/store-locator/README.md)
-  [Read more on back-end support](https://github.com/SAP-samples/upscale-commerce-external-application/tree/sample/store-locator-inventory-intermediary)
+
+    [Read more on the UI](projects/store-locator/README.md)
+
+    [Read more on back-end support](https://github.com/SAP-samples/upscale-commerce-external-application/tree/sample/store-locator-inventory-intermediary)
 2) Event Logger: Displays all known events received by the Custom Component from the SAP Upscale Store. 
-  [Read more](projects/event-logger/README.md)
+
+    [Read more](projects/event-logger/README.md)
 3) Sample Native Extension with the following examples:
     - Klarna Checkout Component
     - Employee Only Service
