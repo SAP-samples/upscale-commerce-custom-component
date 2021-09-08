@@ -28,16 +28,16 @@ Follow the steps below to create your own version of the klarna-checkout native 
 
 3. Component mapping
 
-  Open klarna-checkout.module.ts located in the same directory.
+  Open ../sample-native-extension.module.ts.
 
-  Take note of the following code starting on line 10:
+  Take note of the following code starting on line 30:
 
       this.registrationService.register(
-          'klarna-checkout',
+          'klarna-checkout-component',
           KlarnaCheckoutComponent
       );
 
-  This code is mapping the KlarnaCheckoutComponent component class to the string "klarna-checkout". The registrationService is a service which is shared between the PWA and the custom component, and essentially by providing this mapping, we are telling the PWA that this component exists. Like the gatewayProviderName property above, feel free to set this string to anything you like as well.
+  This code is mapping the KlarnaCheckoutComponent component class to the string "klarna-checkout-component". The registrationService is a service which is shared between the PWA and the custom component, and essentially by providing this mapping, we are telling the PWA that this component exists. Like the gatewayProviderName property above, feel free to set this string to anything you like as well.
 
 4. Publish Component Library
 
