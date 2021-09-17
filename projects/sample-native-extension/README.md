@@ -11,6 +11,8 @@ Run `ng generate component component-name --project sample-native-extension` to 
 
 1) Copy the `lib` folder from the root of a downloaded Upscale PWA App - to the root of "custom-component-samples". 
 2) `npm install`
+3) From root, `npm install ./libs/caas-service-client-angular-0.x.x.tgz`
+4) From root `npm install ./libs/upscale-web-storefront-sdk-0.0.1-BETA.11.tgz`
 
 ## Build
 
