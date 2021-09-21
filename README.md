@@ -2,9 +2,9 @@
 
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/upscale-commerce-custom-component)](https://api.reuse.software/info/github.com/SAP-samples/upscale-commerce-custom-component)
 
-## Custom Component samples for SAP Upscale Commerce.
+## Custom Component samples for SAP Upscale Commerce
 
-Custom Components are used to add customized UI elements to applications generated in SAP Upscale Commerce. The samples referenced here are real-world use cases and use both Iframe and Native based Custom Components. [General documentation](https://help.sap.com/viewer/0160c41e0de84b218d05bc1185213d1d/LATEST/en-US/f542f9dc2d744b28b471ca6f044d832c.html)
+Custom Components are used to add customized UI elements to applications generated in SAP Upscale Commerce. The samples referenced here are real-world use cases and use both Iframe and Native based Custom Components. See [SAP Upscale Commerce User Guide - Custom Components](https://help.sap.com/viewer/0160c41e0de84b218d05bc1185213d1d/LATEST/en-US/f542f9dc2d744b28b471ca6f044d832c.html) on SAP Help Portal.
 
 ## Samples
 
