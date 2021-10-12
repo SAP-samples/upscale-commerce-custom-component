@@ -11,7 +11,7 @@ Run `ng generate component component-name --project sample-native-extension` to 
 
 1) Copy the `lib` folder from the root of a downloaded Upscale PWA App - to the root of "custom-component-samples". 
 2) `npm install`
-3) From root, `npm install ./libs/caas-service-client-angular-0.x.x.tgz`
+3) From root, `npm install ./libs/upscale-service-client-angular-0.x.x.tgz`
 4) From root `npm install ./libs/upscale-web-storefront-sdk-0.x.x.x.tgz`
 
 ## Build
@@ -54,21 +54,7 @@ If all the above setup is complete, please follow the steps below to test your n
 3. Access the project root in terminal and run "npm install"  
  > NOTE: There is a known issue with NPM 7's handling of peer-deps. If using 7 run "npm install --legacy-peer-deps"
 
-4. Add the library module to your application:
-
-    Open the file "src/app/core/extension.module.ts" in your ide/text editor
-    Add the following to the first list of imports:
-    
-    ```
-    import { UpscaleExtensionModule } from 'sample-native-extension';
-
-    // Add Native Extension Modules here
-    const modules = [
-      UpscaleExtensionModule
-    ];
-    ```
-
-5. Access the application via localhost:4200. 
+4. Access the application via localhost:4200. 
     - Eagerly loaded services from the Native Extension should be running. 
     - Components registered in the Native Extension, and configured to your Experience, should be visible/
 
