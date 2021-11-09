@@ -17,11 +17,10 @@ Custom Components are used to add customized UI elements to applications generat
 
     [Read more](projects/event-logger/README.md)
 3) Sample Native Extension with the following examples:
-    - Klarna Checkout Component
     - Employee Only Service
     - JavaScript Injection Service
     
-    [Read more on Native Extensions](projects/sample-native-extension/README.md)
+    [Read more on Native Extensions](HOWTO.md)
 
 ## Requirements
 
