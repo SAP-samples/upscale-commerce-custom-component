@@ -29,6 +29,20 @@ Run the following commands:
 npm install
 npm install --save-dev ./libs/upscale-service-client-angular-<version>.tgz
 npm install --save-dev ./libs/upscale-web-storefront-sdk-<version>.tgz
+
+npm install --save-dev @types/form-data
+npm install --save-dev @types/big.js
+```
+
+Edit the file `projects/custom-native-extension/tsconfig.lib.json`
+```json
+{
+  "compilerOptions": {
+    // Add these 2 lines:
+    "strictNullChecks": false,
+    "noImplicitAny":false
+  }
+}
 ```
 
 ### 3. Register your custom component
