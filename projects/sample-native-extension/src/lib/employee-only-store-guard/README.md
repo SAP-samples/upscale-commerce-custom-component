@@ -41,7 +41,7 @@ This code is mapping the EmployeeOnlyStoreGuardComponent component class to the 
 
 4. Publish Component Library
 
-Open the klarna-checkout folder in terminal and execute commands to install all dependencies, build, and package the application. For the current release, neither upscale-web-storefront-sdk nor caas-service-client-angular will be available publicly. For now, they will be bundled together with the PWA app. Download a new PWA app from Workbench, and there will be a "libs" folder containing the .tgz files you'll need to install. 
+Open the employee-only-store-guard folder in terminal and execute commands to install all dependencies, build, and package the application. For the current release, neither upscale-web-storefront-sdk nor caas-service-client-angular will be available publicly. For now, they will be bundled together with the PWA app. Download a new PWA app from Workbench, and there will be a "libs" folder containing the .tgz files you'll need to install. 
 
 Copy "libs" from the PWA to the root of custom-component-samples
 
@@ -61,7 +61,7 @@ Add the library as a Native Extension within the workbench, similarly to how you
 
 6. Assign Native Extension
 
-In order to add the library to an app where you wish to show the klarna checkout, select the extension name in the selectize field for extensions within the app configuration.
+In order to add the library to an app where you wish to show the employee only store guard, select the extension name in the selectize field for extensions within the app configuration.
 ![assign native extension](../../../../../documentation/images/Assign_native_extension.png) 
 
 Note: You'll need to download the app to actually see the changes.

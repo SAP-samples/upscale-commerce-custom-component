@@ -11,7 +11,7 @@
     "tslib": "^2.0.0"
   },
   "devDependencies": {
-    "@caas/service-client-angular": "file:../../libs/caas-service-client-angular-0.8.187.tgz",
-    "@upscale/web-storefront-sdk": "file:../../libs/upscale-web-storefront-sdk-0.0.1-BETA.8.tgz"
+    "@caas/service-client-angular": "file:../../libs/caas-service-client-angular-0.8.212.tgz",
+    "@upscale/web-storefront-sdk": "file:../../libs/upscale-web-storefront-sdk-0.0.1-BETA.11.tgz"
   }
 }
