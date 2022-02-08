@@ -1,0 +1,32 @@
+
+<ais-instantsearch [config]="config">
+	<ais-configure [searchParameters]="{ hitsPerPage: 8 }"></ais-configure>
+	<ais-search-box
+		class="search-box"
+		placeholder="'Boots'"
+		submitTitle="'string'"
+		resetTitle="'reset'"
+		[searchAsYouType]="true"
+		[autofocus]="true"
+	></ais-search-box>
+	<ais-infinite-hits>
+        <ng-template let-hits="hits" let-results="results" let-refine="showMore" >
+          <div class="ais-Hits-list">
+            <div *ngFor="let hit of hits" class="ais-Hits-item">
+              <div class="hit-name" (click)="viewProduct(hit)">
+                <ais-highlight attribute="name" [hit]="hit"></ais-highlight>
+              </div>
+              <img src="{{hit?.media[0]?.fullSize.split('|')[0]}}" alt="{{hit.name}}" />
+              <div class="hit-description">
+                <ais-highlight attribute="description" [hit]="hit"></ais-highlight>
+              </div>
+              <div class="hit-price">${{hit?.price?.sellingPrice }}</div>
+              <button (click)="addProduct(hit)" >
+                Add to cart
+              </button>
+            </div>
+          </div>
+          <button class="show-more" (click)="refine()">Show More</button>
+        </ng-template>
+    </ais-infinite-hits>
+</ais-instantsearch>

@@ -1,4 +1,0 @@
-pushstate: enabled
-host_dot_files: true
-root: public
-location_include: includes/*.conf

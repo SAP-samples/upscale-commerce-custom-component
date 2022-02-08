@@ -1,0 +1,39 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "augmented-viewer": {
+      "projectType": "library",
+      "root": "projects/augmented-viewer",
+      "sourceRoot": "projects/augmented-viewer/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/augmented-viewer/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/augmented-viewer/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/augmented-viewer/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/augmented-viewer/src/test.ts",
+            "tsConfig": "projects/augmented-viewer/tsconfig.spec.json",
+            "karmaConfig": "projects/augmented-viewer/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "augmented-viewer"
+}

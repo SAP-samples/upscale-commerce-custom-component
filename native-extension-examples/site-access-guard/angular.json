@@ -1,0 +1,39 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "site-access-guard": {
+      "projectType": "library",
+      "root": "projects/site-access-guard",
+      "sourceRoot": "projects/site-access-guard/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/site-access-guard/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/site-access-guard/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/site-access-guard/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/site-access-guard/src/test.ts",
+            "tsConfig": "projects/site-access-guard/tsconfig.spec.json",
+            "karmaConfig": "projects/site-access-guard/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "site-access-guard"
+}
