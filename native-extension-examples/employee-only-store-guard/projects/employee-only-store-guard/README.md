@@ -26,12 +26,12 @@ Run `ng generate component component-name --project sample-native-extension` to 
 1. Create Native Extension
 
   Add the library as a Native Extension within the workbench, similarly to how you would a style extension.
-  ![create native extension](../../documentation/images/Create_Native_Extension.png) 
+  ![create native extension](../../../../documentation/assets/Create_Native_Extension.png) 
 
 2. Assign Native Extension
 
   In order to add the library to an app where you wish, select the extension name in the selectize field for extensions within the app configuration.
-  ![assign native extension](../../documentation/images/Assign_native_extension.png) 
+  ![assign native extension](../../../../documentation/assets/Assign_native_extension.png) 
 
   > Note: You'll need to download the app to actually see the changes.
 
@@ -41,7 +41,7 @@ Run `ng generate component component-name --project sample-native-extension` to 
 
   In the custom component configuration, enter the extension ID and a component identifier corresponding to the mapping done in "sample-native-extension.module.ts". Hit save. 
 
-  ![configure experience](../../documentation/images/configure_experience.png) 
+  ![configure experience](../../../../documentation/assets/configure_experience.png) 
 
 
 ## Installation & Testing

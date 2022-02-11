@@ -1,6 +1,6 @@
 # Employee Only Store Guard
 
-![Employee only screenshot](../../../../../documentation/images/employee-store-blocker.png) 
+![Employee only screenshot](../../../../../../../documentation/assets/employee-store-blocker.png) 
 
 ## What is it?
 This Native Extension is designed to block access to a store based on a customer's "status" (consumer vs employee) which is saved as an Attribute Set.
@@ -18,7 +18,7 @@ Follow the steps below to create your own version of the Employee Store Native E
 
 1. Create a Customer Attribute Set
 
-![Customer Attribute Set](../../../../../documentation/images/customer-attribute-set.png) 
+![Customer Attribute Set](../../../../../../../documentation/assets/customer-attribute-set.png) 
 
 2. Configure mapping
 
@@ -57,12 +57,12 @@ Host the generated tarball (.tgz) for the component library in a public environm
 5. Create Native Extension
 
 Add the library as a Native Extension within the workbench, similarly to how you would a style extension.
-![create native extension](../../../../../documentation/images/Create_Native_Extension.png) 
+![create native extension](../../../../../../../documentation/assets/Create_Native_Extension.png) 
 
 6. Assign Native Extension
 
 In order to add the library to an app where you wish to show the employee only store guard, select the extension name in the selectize field for extensions within the app configuration.
-![assign native extension](../../../../../documentation/images/Assign_native_extension.png) 
+![assign native extension](../../../../../../../documentation/assets/Assign_native_extension.png) 
 
 Note: You'll need to download the app to actually see the changes.
 
@@ -72,7 +72,7 @@ Navigate to the experience editor for the experience associated with the app. Ad
 
 In the custom component configuration, enter the extension ID and a component identifier "employee-only-store-component". Hit save. 
 
-![configure experience](../../../../../documentation/images/configure_experience.png) 
+![configure experience](../../../../../../../documentation/assets/configure_experience.png) 
 
 
 ## Installation & Testing

@@ -55,13 +55,13 @@ Host the generated tarball (.tgz) for the component library in a public environm
 
 Add the library as a Native Extension within the workbench, similarly to how you would a style extension.
 
-![create native extension](../../documentationn/images/Create_Native_Extension.png)
+![create native extension](../../documentation/assets/Create_Native_Extension.png)
 
 **6\. Assign Native Extension**
 
 In order to add the library to an app where you wish to show the klarna checkout, select the extension name in the selectize field for extensions within the app configuration.
 
-![assign native extension](../../documentationn/images/Assign_native_extension.png)
+![assign native extension](../../documentation/assets/Assign_native_extension.png)
 
 Note: You'll need to download the app to actually see the changes.
 
@@ -71,7 +71,7 @@ Navigate to the experience editor for the experience associated with the app. Yo
 
 In the custom component configuration, enter the extension ID and a component identifier corresponding to the mapping done in klarna-checkout.module.ts. Hit save.
 
-![configure experience](../../documentationn/images/configure_experience.png)
+![configure experience](../../documentation/assets/configure_experience.png)
 
 **8\. Payment Configuration**
 
@@ -81,7 +81,7 @@ A postman collection to quickly setup one of these should be accessible via the 
 
 Please also be sure to fill in your config's gatewayProviderName (labelled as "Payment gateway name") as the string specified in klarna-checkout.component.ts above.
 
-![configure payment](../../documentationn/images/configure_payment.png)
+![configure payment](../../documentation/assets/configure_payment.png)
 
 ## Testing
 If all the above setup is complete, please follow the steps below to test your new custom component!
@@ -115,7 +115,7 @@ Access the project root in terminal and run "npm start"
 
 Access the application via localhost:4200, add a product to cart, and proceed to checkout. A klarna payment form should appear in the place of the regular checkout!
 
-![test in pwa](../../documentationn/images/test_in_pwa.png)
+![test in pwa](../../documentation/assets/test_in_pwa.png)
 
 ## How it all works
 The Klarna Checkout component makes use of the aforementioned front end services made available by upscale-provided dependencies; upscale-web-storefront-sdk and caas-service-client-angular, as well as some provided by angular itself.

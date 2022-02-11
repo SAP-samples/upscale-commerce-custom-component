@@ -93,13 +93,13 @@ Location example for Workbench: `git+https://github.com/.../custom-native-extens
 
 For the Extension `Key` value, you must use the `id` value passed to `register(id, type)` in `custom-native-extension.module.ts`.
 
-![create native extension](./documentation/images/Create_Native_Extension.png) 
+![create native extension](../../documentation/assets/Create_Native_Extension.png) 
 
 2. Assign Native Extension
 
 In order to add the library to an app, select the Extension name in the selectize field for extensions within the app configuration.
 
-![assign native extension](./documentation/images/Assign_native_extension.png) 
+![assign native extension](../../documentation/assets/Assign_native_extension.png) 
 
 > Note: You'll need to download the app to actually see the changes.
 
@@ -108,7 +108,7 @@ In order to add the library to an app, select the Extension name in the selectiz
 Navigate to the Experience editor in Workbench for the Experience associated with the app. Add a Custom Component to a Template.
 In the custom component configuration, enter the Extension ID and a component identifier corresponding to the mapping done in `custom-native-extension.module.ts` file. Hit save. 
 
-![configure experience](./documentation/images/configure_experience.png) 
+![configure experience](../../documentation/assets/configure_experience.png) 
 
 ### 7. Installation & Testing
 When all of the above setup are complete, please follow the steps below to test your new Native Extension.
