@@ -36,22 +36,22 @@ This code is mapping the RelayedEventReceptorComponent component class to the st
 
 3. Make use of RelayedEventReceptorService how you see fit
 
-As shown in the sample component provided (relayed-event-receptor/projects/relayed-event-receptor/src/lib/relayed-event-receptor.component.ts), you may subscribe to the RelayEventReceptorService's customComponentEventStream to receive all events which are emitted by the relay custom component. Please refer to the docs linked above for examples of how the native extension can take advantage of these the events.
+As shown in the sample component provided (relayed-event-receptor/projects/relayed-event-receptor/src/lib/relayed-event-receptor.component.ts), you may subscribe to the RelayedEventReceptorService's customComponentEventStream to receive all events which are emitted by the relay custom component. Please refer to the docs linked above for examples of how the native extension can take advantage of these the events.
 
 4. Publish Component Library
 
-Open the relay-event-receptor folder in terminal and execute commands to install all dependencies, build, and package the application. For the current release, neither upscale-web-storefront-sdk nor caas-service-client-angular will be available publicly. For now, they will be bundled together with the PWA app. Download a new PWA app from Workbench, and there will be a "libs" folder containing the .tgz files you'll need to install. 
+Open the relayed-event-receptor folder in terminal and execute commands to install all dependencies, build, and package the application. For the current release, neither upscale-web-storefront-sdk nor caas-service-client-angular will be available publicly. For now, they will be bundled together with the PWA app. Download a new PWA app from Workbench, and there will be a "libs" folder containing the .tgz files you'll need to install. 
 
 Copy "libs" from the PWA to the root of custom-component-samples
 
 The exact commands are as follows:
 
     npm install
-    ng build relay-event-receptor
-    npm pack ./dist/relay-event-receptor 
+    ng build relayed-event-receptor
+    npm pack ./dist/relayed-event-receptor 
     
    
-Host the generated tarball (.tgz) for the component library in a public environment such as NPM, GitHub, or S3. (Default tarball would be named "relay-event-receptor-0.0.1.tgz")
+Host the generated tarball (.tgz) for the component library in a public environment such as NPM, GitHub, or S3. (Default tarball would be named "relayed-event-receptor-0.0.1.tgz")
 
 5. Create Native Extension
 
@@ -69,7 +69,7 @@ Note: You'll need to download the app to actually see the changes.
 
 Navigate to the experience editor for the experience associated with the app and a custom component to the template where the native extension component should appear.
 
-In the custom component configuration, enter the extension ID and a component identifier corresponding to the mapping done in relay-event-receptor.module.ts. Hit save.
+In the custom component configuration, enter the extension ID and a component identifier corresponding to the mapping done in relayed-event-receptor.module.ts. Hit save.
 
 ![configure experience](../../documentation/assets/configure_experience.png)
 
@@ -91,7 +91,7 @@ If all the above setup is complete, please follow the steps below to test your n
     Add the following to the first list of imports:
     
    ``` 
-    import { UpscaleExtensionModule } from 'script-injector';
+    import { UpscaleExtensionModule } from 'relayed-event-receptor';
 
     // Add Native Extension Modules here
     const modules = [
