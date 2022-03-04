@@ -55,7 +55,7 @@ export class ScriptInjectorService {
               resolve({script: name, loaded: true, status: 'Loaded'});
           };
           script.onerror = (error: any) => resolve({script: name, loaded: false, status: 'Loaded'});
-          document.getElementsByTagName('head')[0].appendChild(script);
+          document.head.appendChild(script);
         }
     });
   }
