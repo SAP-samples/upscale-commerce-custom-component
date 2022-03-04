@@ -1,25 +1,22 @@
 import { Injectable } from '@angular/core';
-import { fromEvent, Observable } from 'rxjs';
+import { fromEvent, Observable, ReplaySubject } from 'rxjs';
 
-import { filter } from "rxjs/operators";
-
-export interface IframeMessageConnnection {
-	receive: Observable<any>;
-	// send(message: Object): void;
-}
-
+import { filter, shareReplay } from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
 })
 export class RelayedEventReceptorService {
 
-  targetUrl = "https://glass-cream-bird.glitch.me";
+  private targetUrl = "https://glass-cream-bird.glitch.me";
+  private customComponentEventSubject: ReplaySubject<MessageEvent> = new ReplaySubject<MessageEvent>(1);
+
+  customComponentEventStream = this.customComponentEventSubject.asObservable();
 
   constructor() {
     fromEvent<MessageEvent>(<any>window, 'message')
-      .pipe(filter(message => message.origin === this.targetUrl)) // verify origin
-      .subscribe(message => console.log("Received event", message)) // print event
-    console.log("connection created")
-  }
+      .pipe(filter(message => message.origin === this.targetUrl)).subscribe(event => {
+        this.customComponentEventSubject.next(event);
+      });
+    }
 }
