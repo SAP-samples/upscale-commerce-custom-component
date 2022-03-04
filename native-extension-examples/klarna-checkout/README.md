@@ -3,12 +3,10 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/upscale-commerce-open-payment-integration)](https://api.reuse.software/info/github.com/SAP-samples/upscale-commerce-open-payment-integration)
 
 ## What is it?
-The Klarna checkout custom component is a sample of what will be possible with our brand new overhaul of the existing custom component implementation. The existing solution is only capable of injecting iframes into an Upscale PWA. The new version of custom components, which we are calling native extensions, will be capable of injecting native angular components and services directly into an application. In addition to being visible to web-crawlers, these components will be able to interact directly with the PWA’s front end state and services, enabling the merchant to build essentially anything that an Upscale developer could.
+The Klarna Checkout native extension was created as a functional replacement for the existing Upscale checkout component. While Klarna Checkout is already supported as a Payment Gateway using Upscale’s Open Payment Framework, there are several features which are unavailable when used inside of the default checkout. With default checkout, Payment Gateways are strictly shown within the payment section of the checkout and requires that customers fill in every section of the default checkout leading up to it. This prevents customers from making use of pre-existing Klarna credentials and Klarna’s far more robust address validation; in some cases, it made customers enter the same address twice. Only minor modifications were required to retrofit the Klarna payment configuration to work as a fully standalone checkout flow, which indicates that the same should be possible for many other fully featured checkout api.
 
-To make it easier for a merchant to create a native extension, we have created a new public-facing upscale-web-storefront-sdk containing abstract classes which the component can access. The implementations of these classes exist as part of the PWA, and when the component is loaded, any references to them resolve to the implementations in the PWA. Those services interact with the PWA state, and are what enable much of the complex functionality that a merchant would want. The component can also access our caas-service-client-angular which provides services that interface directly with the back end services, for more fine-grained control.
-
-## Setting up the Custom Component
-Follow the steps below to create your own version of the klarna-checkout native component:
+## Setting up the Native Extension
+Follow the steps below to create your own version of the Klarna Checkout native extension:
 
 **1\. Download**
 
@@ -30,7 +28,7 @@ This code is checking for a payment configuration with a gatewayProviderName mat
 
 Open klarna-checkout.module.ts located in the same directory.
 
-Take note of the following code starting on line 10:
+Take note of the following code starting on line 12:
 
     this.registrationService.register(
         'klarna-checkout',
@@ -95,6 +93,8 @@ If all the above setup is complete, please follow the steps below to test your n
 Access the project root in terminal and run "npm install"
 
 **4\. Add the library module to your application:**
+
+Note: If you're using version 0.59.0 or higher, this step is automated and can be skipped.
 
 Open the file src/app/core/extension.module.ts in your ide/text editor
 
