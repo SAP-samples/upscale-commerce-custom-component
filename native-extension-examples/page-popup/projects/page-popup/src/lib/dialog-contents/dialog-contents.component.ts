@@ -9,11 +9,17 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 export class DialogContentsComponent {
 
   modalTitle: string;
+  modalText: string;
+  modalConfirm: string;
+  modalCancel: string;
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
     this.modalTitle = data.title;
+    this.modalText = data.text;
+    this.modalCancel = data.cancel;
+    this.modalConfirm = data.confirm;
     console.log(data)
   }
 

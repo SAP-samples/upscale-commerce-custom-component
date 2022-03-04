@@ -11,7 +11,10 @@ import { DialogContentsComponent } from './dialog-contents/dialog-contents.compo
 })
 export class PagePopupService {
 
-  modalTitle = "test"
+  modalTitle = "Title";
+  modalText = "Your message body here";
+  modalCancel = "Cancel";
+  modalConfirm = "OK";
 
   constructor(
     public dialog: MatDialog,
@@ -33,7 +36,10 @@ export class PagePopupService {
     dialogConfig.autoFocus = true;
     dialogConfig.data = {
       id: 1,
-      title: "Your title here"
+      title: this.modalTitle,
+      text: this.modalText,
+      cancel: this.modalCancel,
+      confirm: this.modalConfirm,
     };
 
     const dialogRef = this.dialog.open(DialogContentsComponent, dialogConfig);
