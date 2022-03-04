@@ -1,7 +1,7 @@
 # Page Popup Native Extension
 
 ## What is it?
-This Native Extension makes use of the angular material library to render a stylized dialog over the screen when the user navigates to the cart page. It can easily be adjusted to appear on any other page, and the same dialogs can be used to build more professional UI for native extension components. 
+This Native Extension uses the Angular Material library to render a stylized dialog over the screen when the user navigates to the cart page. It can easily be adjusted to appear on any other page, and the same dialog can be used to build more professional UI for native extension components. 
 
 ## Setting up the Native Extension
 Follow the steps below to create your own version of the Page Popup Native Extension:

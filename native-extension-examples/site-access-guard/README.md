@@ -3,7 +3,7 @@
 ![Employee only screenshot](../../../../../../../documentation/assets/employee-store-blocker.png) 
 
 ## What is it?
-This Native Extension is designed to block access to a store based on a customer's "status" (consumer vs employee) which is saved as an Attribute Set.
+This Native Extension is designed to block access to a store based on a user's data (customer vs employee) which is saved as an Attribute Set.
 
 ## Video demo
 

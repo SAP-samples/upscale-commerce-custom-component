@@ -3,7 +3,7 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/upscale-commerce-open-payment-integration)](https://api.reuse.software/info/github.com/SAP-samples/upscale-commerce-open-payment-integration)
 
 ## What is it?
-The Klarna Checkout native extension was created as a functional replacement for the existing Upscale checkout component. While Klarna Checkout is already supported as a Payment Gateway using Upscale’s Open Payment Framework, there are several features which are unavailable when used inside of the default checkout. With default checkout, Payment Gateways are strictly shown within the payment section of the checkout and requires that customers fill in every section of the default checkout leading up to it. This prevents customers from making use of pre-existing Klarna credentials and Klarna’s far more robust address validation; in some cases, it made customers enter the same address twice. Only minor modifications were required to retrofit the Klarna payment configuration to work as a fully standalone checkout flow, which indicates that the same should be possible for many other fully featured checkout api.
+The Klarna Checkout native extension is a functional replacement for the existing Upscale checkout component using the Klarna Gateway. While Klarna Checkout can be supported using Upscale’s Open Payment Framework, there are several features which are unavailable when used inside of the default checkout. With default checkout, Payment Gateways are strictly shown within the payment section of the checkout and requires that customers fill in every section of the default checkout leading up to it. This prevents customers from making use of pre-existing Klarna credentials and Klarna’s more robust address validation; in some cases, it made customers enter the same address twice. Only minor modifications were required to retrofit the Klarna payment configuration to work as a fully standalone checkout flow, which indicates that the same should be possible for many other fully featured checkout API.
 
 ## Setting up the Native Extension
 Follow the steps below to create your own version of the Klarna Checkout native extension:
@@ -22,7 +22,7 @@ Take note of the following code starting on line 110:
         return config.gatewayProviderName === 'klarna-checkout';
     });
 
-This code is checking for a payment configuration with a gatewayProviderName matching "klarna-checkout". Feel free to change this string to something else, so long as it is consistent with that of a compatible payment configuration (more on this later).
+This code is checking for a payment configuration with a gatewayProviderName matching "klarna-checkout". Feel free to change this string to something else, so long as it is consistent with that of a compatible payment configuration (see "Payment Configuration").
 
 **3\. Component mapping**
 
@@ -123,4 +123,4 @@ The Klarna Checkout component makes use of the aforementioned front end services
 Refer to [Klarna Checkout component](https://github.com/SAP-samples/upscale-commerce-open-payment-integration/blob/main/native-extension/klarna/checkout/How%20Klarna%20Checkout%20Component%20Works.docx) for details.
 
 ## License
-Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
+Copyright (c) 2022 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
