@@ -17,7 +17,7 @@ export class SiteAccessGuardService {
 
   private activeQuery = false;
 
-  private asv: AttributeSetValue | undefined = undefined;
+  private asv?: AttributeSetValue;
 
   private attributeSetCode = "57f409e8-d6a9-4059-adda-9b67c8ef167c";
 
@@ -25,9 +25,9 @@ export class SiteAccessGuardService {
 
   private statusAttributeCode = "3f6e9c9d-6403-4652-8c36-79f47fd58270";
 
-  userSiteAccess: BehaviorSubject<any> = new BehaviorSubject(false);
+  userSiteAccess: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
-  userSiteAccessCalculating: BehaviorSubject<any> = new BehaviorSubject(false);
+  userSiteAccessCalculating: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
   constructor(
     private router: Router,
@@ -40,7 +40,7 @@ export class SiteAccessGuardService {
       this.isLoggedIn = !!auth.authToken;
 
       if (this.isLoggedIn) {
-        if(!this.activeQuery && !this.asv) {
+        if (!this.activeQuery && !this.asv) {
           this.userSiteAccessCalculating.next(true);
           this.activeQuery = true;
           setTimeout(() =>
@@ -57,7 +57,7 @@ export class SiteAccessGuardService {
 
     this.router.events.pipe(
       filter(ev => ev instanceof NavigationStart)
-    ).subscribe((ev: any) => {
+    ).subscribe((ev: NavigationStart) => {
       this.evaluateAndApplyRedirect(ev);
     },
     () => {},
@@ -84,11 +84,11 @@ export class SiteAccessGuardService {
   fetchStatus() {
     this.consumerService.getCustomerInfo().pipe(
       concatMap(cust => this.attributeSetService.getAttributeSetValues(this.attributeSetCode, cust.id, AttributeSetResourceType.SAP_CUSTOMER))
-    ).subscribe((asv:AttributeSetValue) => {
+    ).subscribe(asv => {
       this.activeQuery = false;
       this.userSiteAccessCalculating.next(false);
       this.asv = asv;
-      if(asv?.resourceTypes[0]?.attributeSetValues[0][this.statusAttributeCode].includes(this.generalEmployeeStatusValueCode)) {
+      if (asv?.resourceTypes[0]?.attributeSetValues[0][this.statusAttributeCode].includes(this.generalEmployeeStatusValueCode)) {
         console.log("ACCESS GRANTED")
         this.isLoggedIn = true;
         this.siteAccess = true;
