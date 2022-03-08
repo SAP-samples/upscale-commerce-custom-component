@@ -14,7 +14,7 @@ Download this repository as a zip file and extract it.
 
 2. Modify dialog behavior and contents
 
-Open page-popup/projects/page-popup/src/lib/page-popup.service.ts. 
+Open native-extension-examples/page-popup/projects/page-popup/src/lib/page-popup.service.ts. 
 
 Note that all text shown in the dialog is determined by the the dialogConfig object instantiated on line 33. These strings may be changed to anything you wish. On line 46, you may also choose specific behavior for the dialog on close, and this can differ based on the button that is clicked. On line 26, navigation events are used to determine when to show the dialog. If you wish to change the route trigger, please refer to the PWA app for a list of route names in the following PWA file: src/app/app-routing/template-routes.const.ts.
 

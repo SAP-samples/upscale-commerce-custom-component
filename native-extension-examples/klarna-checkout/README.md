@@ -14,7 +14,7 @@ Download this repository as a zip file and extract it.
 
 **2\. Configure mapping**
 
-Navigate to native-extensions/klarna/checkout/projects/klarna-checkout/src/lib/klarna-checkout. Open the klarna-checkout.component.ts file in your desired IDE/text editor.
+Navigate to native-extension-examples/klarna-checkout/projects/klarna-checkout/src/lib/klarna-checkout. Open the klarna-checkout.component.ts file in your desired IDE/text editor.
 
 Take note of the following code starting on line 110:
 

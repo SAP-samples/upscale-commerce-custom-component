@@ -22,11 +22,11 @@ Download this repository as a zip file and extract it.
 
 3. Configure mapping
 
-Navigate to site-access-guard/projects/site-access-guard/src/lib/site-access-guard.service.ts and replace the Attribute codes with the codes generated in step 1.
+Navigate to native-extension-examples/site-access-guard/projects/site-access-guard/src/lib. Open site-access-guard.service.ts and replace the Attribute codes with the codes generated in step 1.
 
 4. Component mapping
 
-Open site-access-guard.module.ts.
+Open site-access-guard.module.ts located in the same directory.
 
 Take note of the following code starting on line 27:
 

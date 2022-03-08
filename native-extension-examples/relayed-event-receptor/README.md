@@ -21,7 +21,7 @@ Download this repository as a zip file and extract it.
 
 2. Component mapping
 
-Open relayed-event-receptor/projects/relayed-event-receptor/src/lib/relayed-event-receptor.module.ts.
+Open native-extension-examples/relayed-event-receptor/projects/relayed-event-receptor/src/lib/relayed-event-receptor.module.ts.
 
 Take note of the following code starting on line 22:
 
