@@ -1,7 +1,7 @@
 # Relayed Event Receptor
 
 ## What is it?
-This native extension contains a service which intercepts custom component events fired from a relay custom component and publishes them for internal use. The example provided is a simple native extension component which lists all events emitted from the service. By using this service, however, it is possible to build any functionality with a native extension which was previously only possible with a custom component.
+Iframe-based custom components have access to a wide array of events which are triggered by various user interactions. When a user clicks on an item in the product listing for example, an event is emitted containing information about it. A custom component can use that information to display or manipulate the product data in unique ways. Ordinarily, native extensions do not have access to events used strictly by custom components. However, it is made possible through the use of relay custom components. Upon receiving an event, a relay custom component immediately posts its contents back to the parent window. This native extension contains a service which intercepts the custom component event and broadcasts it in a stream which native extension components within this project have access to. The service makes it possible to build any functionality with a native extension which was previously only possible when using a custom component. The example provided is a simple native extension component which lists all events emitted by the stream.
 
 ## Relay Custom Component Requirements
 The relay custom component must receive the custom component events, and then immediately post them to the parent window. Please see the sample hosted on glitch:
