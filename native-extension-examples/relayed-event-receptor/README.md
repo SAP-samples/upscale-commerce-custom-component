@@ -10,7 +10,7 @@ https://glitch.com/edit/#!/glass-cream-bird?path=script.js%3A16%3A58
 Note that the expectedOrigin should be changed to match the url of the hosted PWA.
 
 Follow the steps on the official Upscale help pages to add the custom component to your app: 
-https://help.sap.com/viewer/DRAFT/7a1f60b8170f40cfb8313c49bdc7fd13/DEV/en-US/f542f9dc2d744b28b471ca6f044d832c.html
+https://help.sap.com/viewer/0160c41e0de84b218d05bc1185213d1d/SHIP/en-US/f542f9dc2d744b28b471ca6f044d832c.html
 
 ## Setting up the Native Extension
 Follow the steps below to create your own version of the Relayed Event Receptor Native Extension:
