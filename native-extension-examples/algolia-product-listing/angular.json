@@ -1,0 +1,39 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "algolia-product-listing": {
+      "projectType": "library",
+      "root": "projects/algolia-product-listing",
+      "sourceRoot": "projects/algolia-product-listing/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/algolia-product-listing/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/algolia-product-listing/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/algolia-product-listing/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/algolia-product-listing/src/test.ts",
+            "tsConfig": "projects/algolia-product-listing/tsconfig.spec.json",
+            "karmaConfig": "projects/algolia-product-listing/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "algolia-product-listing"
+}

@@ -1,0 +1,32 @@
+<google-map
+	#mapId
+	*ngIf="showMap && product"
+	height="500px"
+	width="100%"
+	[zoom]="zoom"
+	[center]="center"
+	[options]="options"
+	>
+	<map-marker
+		#markerRef="mapMarker"
+		*ngFor="let marker of markers"
+		[position]="marker.position"
+		[options]="marker.options"
+		(mapClick)="openInfo(markerRef, marker.info.storeName, marker.info.storeUrl, marker.info.productAvailability, marker.info.storeAddress)"
+	>
+	</map-marker>
+	<map-info-window>
+		<div class="popup">
+		<p class="line-item store-name">{{storeName}}</p>
+		<p class="line-item underlined">{{product.name}}</p>
+		<p class="line-item">Availability: {{productAvailability}}</p>
+		<div class="address">
+			<img class="line-item icon" src="../../assets/location-icon.svg">
+			<a href="{{storeUrl}}">
+				<p class="line-item">{{storeAddress}}</p>
+			</a>
+		</div>
+		</div>
+	</map-info-window>
+</google-map>
+

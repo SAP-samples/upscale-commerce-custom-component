@@ -1,0 +1,117 @@
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+.search-box {
+	padding: 20px;
+}
+
+img {
+	height: 250px;
+	padding-right: 5px;
+	width: 100%;
+	object-fit: contain;
+}
+
+.ais-Hits-list {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.ais-Hits-item {
+	width: auto;
+	background-color: white;
+	border: none;
+	box-shadow: none;
+	padding: 14px;
+}
+
+.hit-name {
+	line-height: 1.5;
+	max-height: 81px;
+	overflow: hidden;
+	font-weight: 500;
+	color: black;
+  &:hover {
+    filter: brightness(90%);
+  }
+}
+
+.hit-description {
+	max-height: 294px;
+	overflow: hidden;
+	color: #757575;
+}
+
+.hit-price {
+	font-weight: 1000;
+	padding-top: 14px;
+
+}
+
+button {
+	color: #fff;
+	background-color: #000;
+	border-radius: 2px;
+	border: 1px solid #000;
+	width: 100%;
+	font-size: 16px;
+	line-height: 24px;
+	height: 36px;
+	font-weight: 400;
+	cursor: pointer;
+	margin-top: 12px;
+
+}
+
+button:hover {
+	filter: brightness(90%);
+}
+
+.show-more {
+	margin: 20px;
+}
+
+::ng-deep .ais-Highlight {
+	font-size: 18px;
+}
+
+::ng-deep .ais-SearchBox {
+	display: flex;
+	justify-content: center;
+}
+
+::ng-deep .ais-SearchBox-form {
+	display: flex;
+}
+
+::ng-deep .ais-SearchBox-submit{
+	height: 30px;
+	margin-left: 8px;
+}
+
+::ng-deep .ais-SearchBox-submitIcon{
+	height: 22px
+}
+
+
+
+@media (max-width: 600px) {
+	.ais-Hits-list {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+	.ais-Hits-list {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (min-width: 901px) {
+	.ais-Hits-list {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}
