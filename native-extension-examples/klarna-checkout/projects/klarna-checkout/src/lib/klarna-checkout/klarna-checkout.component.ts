@@ -134,15 +134,15 @@ export class KlarnaCheckoutComponent implements OnInit {
             cancelURL: url,
             channel: Channel.BROWSER,
             browserInfo: {
-              colorDepth: window?.screen?.colorDepth,
-              javaEnabled: window?.navigator?.javaEnabled(),
+              colorDepth: window.screen?.colorDepth,
+              javaEnabled: window.navigator?.javaEnabled(),
               javaScriptEnabled: true,
-              language: window?.navigator?.language,
-              screenHeight: window?.screen?.height,
-              screenWidth: window?.screen?.width,
-              userAgent: window?.navigator?.userAgent,
+              language: window.navigator?.language,
+              screenHeight: window.screen?.height,
+              screenWidth: window.screen?.width,
+              userAgent: window.navigator?.userAgent,
               timezoneOffset,
-              originUrl: window?.location?.origin,
+              originUrl: window.location?.origin,
             },
           });
         }),
@@ -171,7 +171,7 @@ export class KlarnaCheckoutComponent implements OnInit {
       )
       .subscribe({
         error: (error: Error | ErrorSchema) => {
-          globalThis.window?.alert(this.appData?.languagePack['general.errors.unknown']);
+          window.alert?.(this.appData?.languagePack['general.errors.unknown']);
 
           this.log({
             description: "Klarna Checkout could not be initialized.",
@@ -181,7 +181,7 @@ export class KlarnaCheckoutComponent implements OnInit {
             },
           });
 
-          console.error(`PAYMENT_INIT_FAILED: ${error?.message}`);
+          window.console?.error(`PAYMENT_INIT_FAILED: ${error?.message}`);
 
           this.router.navigate([this.localeString, "cart"]);
         }

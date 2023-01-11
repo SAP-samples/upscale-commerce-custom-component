@@ -33,18 +33,18 @@ export class AlgoliaProductListingComponent {
   }
 
   addProduct(product: Product) {
-    // console.log("Add product", prod);
+    window.console?.log("Add product", product);
     this.cartService.addItems({orderLines: [{product, type: OrderLineProductType.REGULAR, quantity: 1, productOrigin: {}}]}).subscribe()
   }
 
   viewProduct(product: Product){
-    // console.log("View product", prod);
+    window.console?.log("View product", product);
     this.router.navigate(['en-US', "product", product.name, product.id]);
   }
 
 	searchEdit(event: any) {
 		if(event.results) {
-			console.log(event.results);
+			window.console?.log(event.results);
 		}
 	}
 

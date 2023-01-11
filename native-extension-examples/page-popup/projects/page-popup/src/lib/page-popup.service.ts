@@ -45,8 +45,8 @@ export class PagePopupService {
     const dialogRef = this.dialog.open(DialogContentsComponent, dialogConfig);
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log("Dialog was closed")
-      console.log(result)
+      window.console?.log("Dialog was closed")
+      window.console?.log(result)
     });
   }
 }

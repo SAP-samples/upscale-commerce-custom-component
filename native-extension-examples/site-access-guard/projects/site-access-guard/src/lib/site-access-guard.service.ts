@@ -65,18 +65,18 @@ export class SiteAccessGuardService {
   }
 
   evaluateAndApplyRedirect(ev: NavigationStart) {
-    console.log(this.isLoggedIn, this.siteAccess, this.activeQuery)
+    window.console?.log(this.isLoggedIn, this.siteAccess, this.activeQuery)
     if(ev.url.includes('account') || ev.url.includes('login')){
-      console.log("Navigation allowed - to account page")
+      window.console?.log("Navigation allowed - to account page")
       return;
     } else if(this.isLoggedIn && this.siteAccess) {
-      console.log("Navigation allowed - is logged in employee")
+      window.console?.log("Navigation allowed - is logged in employee")
       return
     } else if(this.activeQuery) {
-      console.log("Navigation allowed - query active - might be an employee")
+      window.console?.log("Navigation allowed - query active - might be an employee")
       return
     } else {
-      console.log("Navigation rejected - not a logged in employee")
+      window.console?.log("Navigation rejected - not a logged in employee")
       this.router.navigate(['/en-US/','account']);
     }
   }
@@ -89,12 +89,12 @@ export class SiteAccessGuardService {
       this.userSiteAccessCalculating.next(false);
       this.asv = asv;
       if (asv?.resourceTypes[0]?.attributeSetValues[0][this.statusAttributeCode].includes(this.generalEmployeeStatusValueCode)) {
-        console.log("ACCESS GRANTED")
+        window.console?.log("ACCESS GRANTED")
         this.isLoggedIn = true;
         this.siteAccess = true;
         this.userSiteAccess.next(true)
       } else {
-        console.log("ACCESS DENIED")
+        window.console?.log("ACCESS DENIED")
         this.siteAccess = false;
         this.userSiteAccess.next(false)
       }

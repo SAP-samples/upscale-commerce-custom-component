@@ -20,7 +20,7 @@ export class DialogContentsComponent {
     this.modalText = data.text;
     this.modalCancel = data.cancel;
     this.modalConfirm = data.confirm;
-    console.log(data)
+    window.console?.log(data)
   }
 
 }

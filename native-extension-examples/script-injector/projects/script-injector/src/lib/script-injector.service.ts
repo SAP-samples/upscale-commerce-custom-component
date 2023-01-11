@@ -27,10 +27,12 @@ export class ScriptInjectorService {
     });
 
 
-    // Append scripts to <head>. Note: this can be done in a component instead of being eagerly loaded
-    this.load('yourExternalScript').then(data => {
-      console.log('script loaded ', data);
-    }).catch(error => console.log(error));
+    if (window.document) {
+      // Append scripts to <head>. Note: this can be done in a component instead of being eagerly loaded
+      this.load('yourExternalScript').then(data => {
+        window.console?.log('script loaded ', data);
+      }).catch(error => window.console?.log(error));
+    }
   }
 
   load(...scripts: string[]) {
