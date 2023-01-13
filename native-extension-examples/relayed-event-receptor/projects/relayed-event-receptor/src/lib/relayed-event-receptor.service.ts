@@ -14,9 +14,11 @@ export class RelayedEventReceptorService {
   customComponentEventStream = this.customComponentEventSubject.asObservable();
 
   constructor() {
-    fromEvent<MessageEvent>(<any>window, 'message')
-      .pipe(filter(message => message.origin === this.targetUrl)).subscribe(event => {
-        this.customComponentEventSubject.next(event);
-      });
+    if (window.addEventListener && window.removeEventListener) {
+      fromEvent<MessageEvent>(<any>window, 'message')
+        .pipe(filter(message => message.origin === this.targetUrl)).subscribe(event => {
+          this.customComponentEventSubject.next(event);
+        });
+      }
     }
 }
